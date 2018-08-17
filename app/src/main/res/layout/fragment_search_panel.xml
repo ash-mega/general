@@ -3,11 +3,18 @@
 	android:id="@+id/fragment_search_panel"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
+	android:background="@android:color/white"
 	android:orientation="vertical">
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/search_conditions_list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#ABCDEF"/>
 	<include layout="@layout/fragment_search_panel_type"/>
 	<View
 		android:layout_width="match_parent"
 		android:layout_height="1dp"
+		android:layout_marginTop="12dp"
 		android:background="@color/divider_upgrade_account"/>
 	<include layout="@layout/fragment_search_panel_dm"/>
 	<View

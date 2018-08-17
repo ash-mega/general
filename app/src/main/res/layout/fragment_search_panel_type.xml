@@ -2,7 +2,6 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:background="#FFF5F5F5"
 	android:orientation="vertical">
 	<RelativeLayout
 		android:layout_width="wrap_content"
@@ -14,6 +13,7 @@
 			android:layout_centerVertical="true"
 			android:layout_marginLeft="16dp"
 			android:text="File types"
+			android:textColor="#DE000000"
 			android:textSize="14sp"/>
 	</RelativeLayout>
 	<LinearLayout
@@ -21,61 +21,84 @@
 		android:layout_height="wrap_content"
 		android:orientation="vertical">
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_type_audio"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_folder"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_audio_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_marginLeft="72dp"
-				android:layout_centerVertical="true"
-				android:text="Folder"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Audio"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_type_folder"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_java_list"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_folder_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_marginLeft="72dp"
-				android:layout_centerVertical="true"
-				android:text="Java"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Folders"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_type_pdf"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_pdf_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="PDFs"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_type_image"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_image_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="Photos &amp; images"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_type_powerpoint"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_powerpoint_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="Presentations"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_type_spreadsheet"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
 				android:src="@drawable/ic_spreadsheet_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_marginLeft="72dp"
-				android:layout_centerVertical="true"
-				android:text="Spreadsheet list"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Presentations"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_type_video"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_video_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="Videos"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_type_text"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_text_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="Text documents"/>
 		</RelativeLayout>
 	</LinearLayout>
 </LinearLayout>

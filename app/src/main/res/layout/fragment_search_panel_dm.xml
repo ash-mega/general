@@ -1,13 +1,13 @@
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:orientation="vertical">
 	<RelativeLayout
-		android:id="@+id/header"
+		android:id="@+id/search_dm_header"
 		android:layout_width="wrap_content"
 		android:layout_height="48dp"
-		android:background="#FFF5F5F5">
+		android:background="@android:color/white">
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -29,105 +29,58 @@
 		android:id="@+id/dm_options_panel"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/header"
-		android:background="@android:color/white"
 		android:elevation="-0.1dp"
 		android:orientation="vertical"
 		android:visibility="gone">
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_dm_anytime"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_select_folder"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_video_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="72dp"
-				android:text="Any time"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Any time"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_dm_today"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_java_list"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_pdf_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="72dp"
-				android:text="Today"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Today"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_dm_lastweek"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_java_list"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_text_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="72dp"
-				android:text="Today"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Last week"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_dm_lastmonth"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_java_list"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_powerpoint_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="72dp"
-				android:text="Today"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Last month"/>
 		</RelativeLayout>
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="48dp">
+			android:id="@+id/search_dm_lastyear"
+			style="@style/search_panel_option">
 			<ImageView
-				android:layout_width="24dp"
-				android:layout_height="24dp"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="16dp"
-				android:src="@drawable/ic_java_list"/>
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_pdf_list"/>
 			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:layout_marginLeft="72dp"
-				android:text="Today"
-				android:textSize="16sp"/>
+				style="@style/search_panel_option_text"
+				android:text="Last year"/>
 		</RelativeLayout>
 	</LinearLayout>
-</RelativeLayout>
+</LinearLayout>
