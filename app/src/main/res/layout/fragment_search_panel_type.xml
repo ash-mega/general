@@ -28,7 +28,7 @@
 				android:src="@drawable/ic_audio_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Audio"/>
+				android:text="@string/search_type_audio"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_folder"
@@ -38,7 +38,7 @@
 				android:src="@drawable/ic_folder_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Folders"/>
+				android:text="@string/search_type_folder"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_pdf"
@@ -48,7 +48,7 @@
 				android:src="@drawable/ic_pdf_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="PDFs"/>
+				android:text="@string/search_type_pdf"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_image"
@@ -58,7 +58,7 @@
 				android:src="@drawable/ic_image_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Photos &amp; images"/>
+				android:text="@string/search_type_image"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_powerpoint"
@@ -68,7 +68,7 @@
 				android:src="@drawable/ic_powerpoint_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Presentations"/>
+				android:text="@string/search_type_powerpoint"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_spreadsheet"
@@ -78,7 +78,7 @@
 				android:src="@drawable/ic_spreadsheet_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Presentations"/>
+				android:text="@string/search_type_spreadsheet"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_video"
@@ -88,7 +88,7 @@
 				android:src="@drawable/ic_video_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Videos"/>
+				android:text="@string/search_type_video"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_type_text"
@@ -98,7 +98,7 @@
 				android:src="@drawable/ic_text_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Text documents"/>
+				android:text="@string/search_type_text"/>
 		</RelativeLayout>
 	</LinearLayout>
 </LinearLayout>

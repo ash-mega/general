@@ -4,28 +4,40 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends Activity {
     
-    private ViewGroup dmPanel,sizePanel;
+    private ViewGroup dmPanel, sizePanel;
+    
+    private int lastClickId;
     
     private RecyclerView cListView;
     
-    private List<String> conditions = new ArrayList<>();
+    private static final SparseArray<String> conditionsMapping = new SparseArray<>();
+    
+    private static final Map<Integer, String> conditions = new HashMap<>();
+
+//    public static final List<String> conditions = new LinkedList<>();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadMapping();
+        
         setContentView(R.layout.activity_main);
         cListView = findViewById(R.id.search_conditions_list);
+        
         setView();
     }
     
@@ -47,10 +59,10 @@ public class MainActivity extends Activity {
             
             @Override
             public void onAnimationEnd(Animation animation) {
-                if(dmPanel.getVisibility() != View.GONE) {
+                if (dmPanel.getVisibility() != View.GONE) {
                     dmPanel.setVisibility(View.GONE);
                 }
-                if(sizePanel.getVisibility() != View.GONE) {
+                if (sizePanel.getVisibility() != View.GONE) {
                     sizePanel.setVisibility(View.GONE);
                 }
             }
@@ -107,11 +119,63 @@ public class MainActivity extends Activity {
         }
     }
     
-    public void selectType(View v) {
-        log("select condition:" + v.getId());
-        switch (v.getId()) {
-        
+    /**
+     * Condition click listener.
+     *
+     * @param v Condition layout(RelativeLayout).
+     */
+    public void selectCondition(View v) {
+        int id = v.getId();
+        if (conditions.containsKey(id)) {
+            conditions.remove(id);
+            unSelect(id);
+        } else {
+            conditions.put(id,conditionsMapping.get(id));
+            select(id);
         }
+        log(conditions.values());
+    }
+    
+    private void select(int id) {
+        //TODO
+        Animation flipAnimation = AnimationUtils.loadAnimation(this,R.anim.multiselect_flip);
+        View icon = getIcon(id);
+        icon.startAnimation(flipAnimation);
+    }
+    
+    private void unSelect(int id) {
+        //TODO
+        getIcon(id);
+    }
+    
+    private View getIcon(int parentId) {
+        return ((ViewGroup)findViewById(parentId)).getChildAt(0);
+    }
+    
+    private void loadMapping() {
+        //Types
+        conditionsMapping.put(R.id.search_type_video,getString(R.string.search_type_video));
+        conditionsMapping.put(R.id.search_type_audio,getString(R.string.search_type_audio));
+        conditionsMapping.put(R.id.search_type_folder,getString(R.string.search_type_folder));
+        conditionsMapping.put(R.id.search_type_image,getString(R.string.search_type_image));
+        conditionsMapping.put(R.id.search_type_pdf,getString(R.string.search_type_pdf));
+        conditionsMapping.put(R.id.search_type_powerpoint,getString(R.string.search_type_powerpoint));
+        conditionsMapping.put(R.id.search_type_spreadsheet,getString(R.string.search_type_spreadsheet));
+        conditionsMapping.put(R.id.search_type_text,getString(R.string.search_type_text));
+        
+        //Date modified
+        conditionsMapping.put(R.id.search_dm_anytime,getString(R.string.search_dm_anytime));
+        conditionsMapping.put(R.id.search_dm_today,getString(R.string.search_dm_today));
+        conditionsMapping.put(R.id.search_dm_lastweek,getString(R.string.search_dm_lastweek));
+        conditionsMapping.put(R.id.search_dm_lastmonth,getString(R.string.search_dm_lastmonth));
+        conditionsMapping.put(R.id.search_dm_lastyear,getString(R.string.search_dm_lastyear));
+        
+        //Size
+        conditionsMapping.put(R.id.search_size_anysize,getString(R.string.search_size_anysize));
+        conditionsMapping.put(R.id.search_size_05,getString(R.string.search_size_05));
+        conditionsMapping.put(R.id.search_size_525,getString(R.string.search_size_525));
+        conditionsMapping.put(R.id.search_size_1001,getString(R.string.search_size_1001));
+        conditionsMapping.put(R.id.search_size_25100,getString(R.string.search_size_25100));
     }
     
     private void log(Object anything) {

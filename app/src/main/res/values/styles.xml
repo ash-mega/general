@@ -6,7 +6,7 @@
 	<style name="search_panel_option">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">48dp</item>
-		<item name="android:onClick">selectType</item>
+		<item name="android:onClick">selectCondition</item>
 	</style>
 	<style name="search_panel_option_icon">
 		<item name="android:layout_width">24dp</item>
@@ -14,6 +14,12 @@
 		<item name="android:layout_alignParentLeft">true</item>
 		<item name="android:layout_centerVertical">true</item>
 		<item name="android:layout_marginLeft">16dp</item>
+		<item name="android:contentDescription">icon</item>
+	</style>
+	<style name="search_panel_option_checkbox" parent="search_panel_option_icon">
+		<item name="android:enabled">false</item>
+		<item name="android:clickable">true</item>
+		<item name="android:layout_marginLeft">13dp</item>
 	</style>
 	<style name="search_panel_option_text">
 		<item name="android:fontFamily">Roboto</item>

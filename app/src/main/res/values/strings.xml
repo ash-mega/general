@@ -1,3 +1,24 @@
 <resources>
 	<string name="app_name">animation</string>
+	<!--####################################-->
+	<string name="search_type_audio" context="Select search filter by file type.">Audio</string>
+	<string name="search_type_folder" context="Select search filter by file type.">Folders</string>
+	<string name="search_type_pdf" context="Select search filter by file type.">PDFs</string>
+	<string name="search_type_image" context="Select search filter by file type.">Photos &amp; images</string>
+	<string name="search_type_powerpoint" context="Select search filter by file type.">Presentations</string>
+	<string name="search_type_spreadsheet" context="Select search filter by file type.">Spreadsheets</string>
+	<string name="search_type_video" context="Select search filter by file type.">Videos</string>
+	<string name="search_type_text" context="Select search filter by file type.">Text documents</string>
+
+	<string name="search_dm_anytime" context="Select search filter by modified date.">Any time</string>
+	<string name="search_dm_today" context="Select search filter by modified date.">Today</string>
+	<string name="search_dm_lastweek" context="Select search filter by modified date.">Last week</string>
+	<string name="search_dm_lastmonth" context="Select search filter by modified date.">Last month</string>
+	<string name="search_dm_lastyear" context="Select search filter by modified date.">Last year</string>
+
+	<string name="search_size_anysize" context="Select search filter by modified date.">Any size</string>
+	<string name="search_size_05" context="Select search filter by modified date.">0 &#8211; 5 MB</string>
+	<string name="search_size_525" context="Select search filter by modified date.">5 &#8211; 25 MB</string>
+	<string name="search_size_25100" context="Select search filter by modified date.">25 &#8211; 100 MB</string>
+	<string name="search_size_1001" context="Select search filter by modified date.">100 &#8211; 1 GB</string>
 </resources>

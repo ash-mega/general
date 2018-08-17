@@ -40,7 +40,7 @@
 				android:src="@drawable/ic_video_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Any time"/>
+				android:text="@string/search_dm_anytime"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_dm_today"
@@ -50,7 +50,7 @@
 				android:src="@drawable/ic_pdf_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Today"/>
+				android:text="@string/search_dm_today"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_dm_lastweek"
@@ -60,7 +60,7 @@
 				android:src="@drawable/ic_text_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Last week"/>
+				android:text="@string/search_dm_lastweek"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_dm_lastmonth"
@@ -70,7 +70,7 @@
 				android:src="@drawable/ic_powerpoint_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Last month"/>
+				android:text="@string/search_dm_lastmonth"/>
 		</RelativeLayout>
 		<RelativeLayout
 			android:id="@+id/search_dm_lastyear"
@@ -80,7 +80,7 @@
 				android:src="@drawable/ic_pdf_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
-				android:text="Last year"/>
+				android:text="@string/search_dm_lastyear"/>
 		</RelativeLayout>
 	</LinearLayout>
 </LinearLayout>
