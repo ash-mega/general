@@ -17,9 +17,14 @@
 		<item name="android:contentDescription">icon</item>
 	</style>
 	<style name="search_panel_option_checkbox" parent="search_panel_option_icon">
+		<item name="android:layout_width">22dp</item>
+		<item name="android:layout_height">22dp</item>
 		<item name="android:enabled">false</item>
-		<item name="android:clickable">true</item>
-		<item name="android:layout_marginLeft">13dp</item>
+		<item name="android:clickable">false</item>
+		<item name="android:layout_marginLeft">19dp</item>
+		<item name="android:src">@drawable/checkbox_off_background</item>
+		<item name="android:tag">checkbox_off_background</item>
+		<item name="android:onClick">selectCondition</item>
 	</style>
 	<style name="search_panel_option_text">
 		<item name="android:fontFamily">Roboto</item>

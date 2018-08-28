@@ -11,9 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends Activity {
@@ -34,7 +33,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadMapping();
-        
         setContentView(R.layout.activity_main);
         cListView = findViewById(R.id.search_conditions_list);
         
@@ -126,6 +124,9 @@ public class MainActivity extends Activity {
      */
     public void selectCondition(View v) {
         int id = v.getId();
+        if (id == -1) {
+            id = ((View)v.getParent()).getId();
+        }
         if (conditions.containsKey(id)) {
             conditions.remove(id);
             unSelect(id);
@@ -137,19 +138,21 @@ public class MainActivity extends Activity {
     }
     
     private void select(int id) {
-        //TODO
         Animation flipAnimation = AnimationUtils.loadAnimation(this,R.anim.multiselect_flip);
-        View icon = getIcon(id);
+        ImageView icon = getIcon(id);
         icon.startAnimation(flipAnimation);
+        icon.setImageResource(R.drawable.ic_select_folder);
     }
     
     private void unSelect(int id) {
-        //TODO
-        getIcon(id);
+        ImageView icon = getIcon(id);
+//        Animation flipAnimation = AnimationUtils.loadAnimation(this,R.anim.multiselect_flip);
+//        icon.startAnimation(flipAnimation);
+        icon.setImageResource(getIconDrawableId(icon.getTag()));
     }
     
-    private View getIcon(int parentId) {
-        return ((ViewGroup)findViewById(parentId)).getChildAt(0);
+    private ImageView getIcon(int parentId) {
+        return (ImageView)((ViewGroup)findViewById(parentId)).getChildAt(0);
     }
     
     private void loadMapping() {
@@ -178,8 +181,22 @@ public class MainActivity extends Activity {
         conditionsMapping.put(R.id.search_size_25100,getString(R.string.search_size_25100));
     }
     
+    private int getIconDrawableId(Object tag) {
+        Class<R.drawable> drawableClass = R.drawable.class;
+        try {
+            Field field = drawableClass.getField(tag.toString());
+            field.setAccessible(true);
+            return (int)field.get(null);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        return R.drawable.ic_folder_list;
+    }
+    
     private void log(Object anything) {
         String msg = (anything == null) ? "NULL" : anything.toString();
-        Log.e("17-Aug"," ---> :" + msg);
+        Log.e("@#@"," ---> :" + msg);
     }
 }

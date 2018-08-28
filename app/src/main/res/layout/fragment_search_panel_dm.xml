@@ -1,8 +1,71 @@
-<LinearLayout
+<FrameLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/dm_options_panel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="48dp"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<RelativeLayout
+			android:id="@+id/search_dm_anytime"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_video_list"
+				android:tag="ic_video_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_dm_anytime"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_dm_today"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_pdf_list"
+				android:tag="ic_pdf_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_dm_today"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_dm_lastweek"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_text_list"
+				android:tag="ic_text_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_dm_lastweek"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_dm_lastmonth"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_powerpoint_list"
+				android:tag="ic_powerpoint_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_dm_lastmonth"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_dm_lastyear"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_icon"
+				android:src="@drawable/ic_pdf_list"
+				android:tag="ic_pdf_list"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_dm_lastyear"/>
+		</RelativeLayout>
+	</LinearLayout>
 	<RelativeLayout
 		android:id="@+id/search_dm_header"
 		android:layout_width="wrap_content"
@@ -25,62 +88,4 @@
 			android:layout_marginRight="16dp"
 			android:src="@drawable/ic_g_arrow_collapsexxxhdpi"/>
 	</RelativeLayout>
-	<LinearLayout
-		android:id="@+id/dm_options_panel"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:elevation="-0.1dp"
-		android:orientation="vertical"
-		android:visibility="gone">
-		<RelativeLayout
-			android:id="@+id/search_dm_anytime"
-			style="@style/search_panel_option">
-			<ImageView
-				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_video_list"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_dm_anytime"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_dm_today"
-			style="@style/search_panel_option">
-			<ImageView
-				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_pdf_list"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_dm_today"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_dm_lastweek"
-			style="@style/search_panel_option">
-			<ImageView
-				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_text_list"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_dm_lastweek"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_dm_lastmonth"
-			style="@style/search_panel_option">
-			<ImageView
-				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_powerpoint_list"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_dm_lastmonth"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_dm_lastyear"
-			style="@style/search_panel_option">
-			<ImageView
-				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_pdf_list"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_dm_lastyear"/>
-		</RelativeLayout>
-	</LinearLayout>
-</LinearLayout>
+</FrameLayout>

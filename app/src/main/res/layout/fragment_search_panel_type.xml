@@ -25,7 +25,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_audio_list"/>
+				android:src="@drawable/ic_audio_list"
+				android:tag="ic_audio_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_audio"/>
@@ -35,7 +36,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_folder_list"/>
+				android:src="@drawable/ic_folder_list"
+				android:tag="ic_folder_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_folder"/>
@@ -45,7 +47,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_pdf_list"/>
+				android:src="@drawable/ic_pdf_list"
+				android:tag="ic_pdf_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_pdf"/>
@@ -55,7 +58,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_image_list"/>
+				android:src="@drawable/ic_image_list"
+				android:tag="ic_image_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_image"/>
@@ -65,7 +69,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_powerpoint_list"/>
+				android:src="@drawable/ic_powerpoint_list"
+				android:tag="ic_powerpoint_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_powerpoint"/>
@@ -75,7 +80,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_spreadsheet_list"/>
+				android:src="@drawable/ic_spreadsheet_list"
+				android:tag="ic_spreadsheet_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_spreadsheet"/>
@@ -85,7 +91,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_video_list"/>
+				android:src="@drawable/ic_video_list"
+				android:tag="ic_video_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_video"/>
@@ -95,7 +102,8 @@
 			style="@style/search_panel_option">
 			<ImageView
 				style="@style/search_panel_option_icon"
-				android:src="@drawable/ic_text_list"/>
+				android:src="@drawable/ic_text_list"
+				android:tag="ic_text_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
 				android:text="@string/search_type_text"/>

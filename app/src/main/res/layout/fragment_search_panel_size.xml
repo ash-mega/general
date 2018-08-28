@@ -1,8 +1,62 @@
-<LinearLayout
+<FrameLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/size_options_panel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="48dp"
+		android:background="@android:color/white"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<RelativeLayout
+			android:id="@+id/search_size_anysize"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_checkbox"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_size_anysize"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_size_05"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_checkbox"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_size_05"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_size_525"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_checkbox"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_size_525"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_size_25100"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_checkbox"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_size_25100"/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/search_size_1001"
+			style="@style/search_panel_option">
+			<ImageView
+				style="@style/search_panel_option_checkbox"/>
+			<TextView
+				style="@style/search_panel_option_text"
+				android:text="@string/search_size_1001"/>
+		</RelativeLayout>
+	</LinearLayout>
 	<RelativeLayout
 		android:id="@+id/search_size_header"
 		android:layout_width="wrap_content"
@@ -25,63 +79,4 @@
 			android:layout_marginRight="16dp"
 			android:src="@drawable/ic_g_arrow_collapsexxxhdpi"/>
 	</RelativeLayout>
-	<LinearLayout
-		android:id="@+id/size_options_panel"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="@android:color/white"
-		android:elevation="-0.1dp"
-		android:orientation="vertical"
-		android:visibility="gone">
-		<RelativeLayout
-			android:id="@+id/search_size_anysize"
-			style="@style/search_panel_option">
-			<CheckBox
-				style="@style/search_panel_option_checkbox"
-				android:layout_marginLeft="13dp"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_size_anysize"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_size_05"
-			style="@style/search_panel_option">
-			<CheckBox
-				style="@style/search_panel_option_checkbox"
-				android:layout_marginLeft="13dp"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_size_05"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_size_525"
-			style="@style/search_panel_option">
-			<CheckBox
-				style="@style/search_panel_option_checkbox"
-				android:layout_marginLeft="13dp"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_size_525"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_size_25100"
-			style="@style/search_panel_option">
-			<CheckBox
-				style="@style/search_panel_option_checkbox"
-				android:layout_marginLeft="13dp"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_size_25100"/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:id="@+id/search_size_1001"
-			style="@style/search_panel_option">
-			<CheckBox
-				style="@style/search_panel_option_checkbox"
-				android:layout_marginLeft="13dp"/>
-			<TextView
-				style="@style/search_panel_option_text"
-				android:text="@string/search_size_1001"/>
-		</RelativeLayout>
-	</LinearLayout>
-</LinearLayout>
+</FrameLayout>
