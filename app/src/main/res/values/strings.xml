@@ -1,5 +1,8 @@
 <resources>
 	<string name="app_name">animation</string>
+	<string name="title_file_type" context="Select search filter by file type.">File types</string>
+	<string name="title_file_modified_date" context="Select search filter by file type.">Modified date</string>
+	<string name="title_file_size" context="Select search filter by file size.">Size</string>
 	<!--####################################-->
 	<string name="search_type_audio" context="Select search filter by file type.">Audio</string>
 	<string name="search_type_folder" context="Select search filter by file type.">Folders</string>

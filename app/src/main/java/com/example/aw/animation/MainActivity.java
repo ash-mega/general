@@ -146,8 +146,8 @@ public class MainActivity extends Activity {
     
     private void unSelect(int id) {
         ImageView icon = getIcon(id);
-//        Animation flipAnimation = AnimationUtils.loadAnimation(this,R.anim.multiselect_flip);
-//        icon.startAnimation(flipAnimation);
+        Animation flipAnimation = AnimationUtils.loadAnimation(this,R.anim.multiselect_flip);
+        icon.startAnimation(flipAnimation);
         icon.setImageResource(getIconDrawableId(icon.getTag()));
     }
     

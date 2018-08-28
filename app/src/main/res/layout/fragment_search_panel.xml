@@ -10,13 +10,13 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:background="#ABCDEF"/>
-	<include layout="@layout/fragment_search_panel_dm"/>
+	<include layout="@layout/fragment_search_panel_type"/>
 	<View
 		android:layout_width="match_parent"
 		android:layout_height="1dp"
 		android:layout_marginTop="12dp"
 		android:background="@color/divider_upgrade_account"/>
-	<include layout="@layout/fragment_search_panel_type"/>
+	<include layout="@layout/fragment_search_panel_dm"/>
 	<View
 		android:layout_width="match_parent"
 		android:layout_height="1dp"

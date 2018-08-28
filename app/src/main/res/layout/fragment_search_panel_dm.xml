@@ -19,6 +19,7 @@
 				android:tag="ic_video_list"/>
 			<TextView
 				style="@style/search_panel_option_text"
+				android:layout_width="match_parent"
 				android:text="@string/search_dm_anytime"/>
 		</RelativeLayout>
 		<RelativeLayout
@@ -77,7 +78,7 @@
 			android:layout_alignParentLeft="true"
 			android:layout_centerVertical="true"
 			android:layout_marginLeft="16dp"
-			android:text="Date modified"
+			android:text="@string/title_file_modified_date"
 			android:textSize="14sp"/>
 		<ImageView
 			android:id="@+id/date_modified_arrow"

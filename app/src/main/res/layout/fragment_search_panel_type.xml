@@ -12,7 +12,7 @@
 			android:layout_alignParentLeft="true"
 			android:layout_centerVertical="true"
 			android:layout_marginLeft="16dp"
-			android:text="File types"
+			android:text="@string/title_file_type"
 			android:textColor="#DE000000"
 			android:textSize="14sp"/>
 	</RelativeLayout>
