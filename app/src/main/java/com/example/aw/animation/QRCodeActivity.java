@@ -6,10 +6,10 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.google.zxing.BarcodeFormat;
@@ -31,21 +31,45 @@ public class QRCodeActivity extends Activity {
         setContentView(R.layout.activity_qrcode);
         qrImageView = findViewById(R.id.qr_2fa);
         try {
-            generate2FAQR(URL);
+//            generate2FAQR(URL);
+            gen();
         } catch (WriterException e) {
             e.printStackTrace();
         }
     }
     
+    private void gen() throws WriterException {
+        BitMatrix encode = new MultiFormatWriter().encode(URL,BarcodeFormat.QR_CODE,QR_L,QR_L,null);
+        int[] pixels = new int[QR_L * QR_L];
+        for (int i = 0;i < QR_L;i++) {
+            for (int j = 0;j < QR_L;j++) {
+                if (encode.get(j,i)) {
+                    pixels[i * QR_L + j] = Color.CYAN;
+                } else {
+                    pixels[i * QR_L + j] = 0xffffffff;
+                }
+            }
+        }
+        Bitmap bitmap = Bitmap.createBitmap(pixels,0,QR_L,QR_L,QR_L,Bitmap.Config.RGB_565);
+        
+//        Canvas c = new Canvas(bitmap);
+//        Paint paint = new Paint();
+//        paint.setAntiAlias(true);
+//        paint.setColor(Color.RED);
+//        c.drawRoundRect(new RectF(3.75f,3.75f,10.75f,10.75f),30,30,paint);
+        qrImageView.setImageBitmap(bitmap);
+        
+    }
+    
     private void generate2FAQR(String url) throws WriterException {
-        Bitmap bitmap = Bitmap.createBitmap(L,L,Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(L,L,Bitmap.Config.RGB_565);
         BitMatrix bitMatrix = new MultiFormatWriter().encode(url,BarcodeFormat.QR_CODE,QR_L,QR_L,null);
         
         Canvas c = new Canvas(bitmap);
         Paint paint = new Paint();
         paint.setAntiAlias(true);
-        paint.setColor(Color.LTGRAY);
-        c.drawRect(0,0,L,L,paint);
+//        paint.setColor(Color.LTGRAY);
+//        c.drawRect(0,0,QR_L,QR_L,paint);
         int t = 0, f = 0;
         for (int y = 0;y < QR_L;y++) {
             for (int x = 0;x < QR_L;x++) {
@@ -56,7 +80,7 @@ public class QRCodeActivity extends Activity {
                     f++;
                     paint.setColor(Color.CYAN);
                 }
-                c.drawCircle(x * SCALE ,y * SCALE,RADIUS ,paint);
+                c.drawCircle(x * SCALE,y * SCALE,RADIUS,paint);
             }
         }
         log("t: " + t + " | f: " + f);
@@ -64,13 +88,13 @@ public class QRCodeActivity extends Activity {
         qrImageView.setImageBitmap(bitmap);
     }
     
-    public static final int L = 1000;
+    public static final int L = 50;
     
-    public static final int QR_L = 70;
+    public static final int QR_L = 500;
     
-    public static final float SCALE = 20.2f;
+    public static final float SCALE = 1f;
     
-    public static final float RADIUS = 10f;
+    public static final float RADIUS = 1f;
     
     private void log(Object anything) {
         String msg = (anything == null) ? "NULL" : anything.toString();
