@@ -34,7 +34,7 @@ public class QRCodeActivity extends Activity {
     
     public static final float RADIUS = 1f;
     
-    public static final String URL = "otpauth://totp/MEGA:aw+1@mega.nz?secret=krqsus6fzz5evpidmqyozxwajfmfnqsgescvmh2eaykqcbxousuq&issuer=MEGA";
+    public static final String URL = "otpauth://totp/Ash:aw+1@ashtray.nz?secret=krqsus6fzz5evpidmqyozxwajfmfnqsgescvmh2eaykqcbxousuq&issuer=Ash";
     
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
