@@ -3,26 +3,25 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@android:color/holo_green_light"
 	android:orientation="vertical">
 	<ImageView
 		android:id="@+id/qr_2fa_1"
 		android:layout_width="140dp"
 		android:layout_height="140dp"
-		android:layout_margin="20dp"
 		android:layout_gravity="center_horizontal"
-		android:src="@mipmap/ic_launcher"/>
+		android:layout_margin="20dp"
+	android:background="@color/colorPrimaryDark"/>
 	<ImageView
 		android:id="@+id/qr_2fa_2"
 		android:layout_width="140dp"
 		android:layout_height="140dp"
-		android:layout_margin="20dp"
 		android:layout_gravity="center_horizontal"
-		android:src="@mipmap/ic_launcher"/>
+		android:layout_margin="20dp"/>
 	<ImageView
 		android:id="@+id/qr_2fa_3"
 		android:layout_width="140dp"
 		android:layout_height="140dp"
-		android:layout_margin="20dp"
 		android:layout_gravity="center_horizontal"
-		android:src="@mipmap/ic_launcher"/>
+		android:layout_margin="20dp"/>
 </LinearLayout>
