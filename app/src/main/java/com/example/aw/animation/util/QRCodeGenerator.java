@@ -54,7 +54,7 @@ public class QRCodeGenerator {
     
     private static final float TO_LEFT_OFFSET = -1f;
     
-    private static final float TO_RIGHT_OFFSET = 1f;
+    private static final float TO_RIGHT_OFFSET = -TO_LEFT_OFFSET;
     
     public Bitmap generate(String content) throws WriterException {
         float resize = ((float)canvasSize / (float)qrCodeSize);

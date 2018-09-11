@@ -50,7 +50,7 @@ public class QRCodeActivity extends Activity {
         }
     }
     
-    public static final String URL = "otpauth://totp/Ash:a1312;saldflfdldasasddasdaskldasklasklkas@a.a?secret=krqsus6fzz5evpidmqyozxwajfmfnqsgescvmh2eaykqcbxousuq&issuer=Ash";
+    public static final String URL = "otpauth://totp/Ash:a1312;saldflfdldasasddasdaskldasklasklkas@a.a?secret=krqsus6fzz5evpidmqyjghjghjghnqsgescvmh2eaykqcbxousuq&issuer=Ash";
 //    public static final String URL = "d";
     
     public static final int CL = URL.length();
@@ -154,10 +154,9 @@ public class QRCodeActivity extends Activity {
     private void gen2() throws WriterException {
         QRCodeGenerator generator = new QRCodeGenerator();
         generator.setDecorationColor(Color.RED);
-//        generator.setPointColor(Color.GREEN);
+        generator.setCanvasSize(500);
         generator.setQrCodeSize(50);
         generator.setPointRadius(5f);
-        
         qrImageView2.setImageBitmap(generator.generate(URL));
     }
     
